@@ -1,0 +1,133 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #080b1c, #171b38, #25204a);
+    color: white;
+    padding: 20px;
+}
+
+.clock-container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.clock-card {
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #b7b9d8;
+    margin-bottom: 30px;
+}
+
+.live-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #45edaa;
+    box-shadow: 0 0 12px #45edaa;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.time-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: clamp(38px, 10vw, 75px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(130, 120, 255, 0.5);
+    font-variant-numeric: tabular-nums;
+}
+
+.colon {
+    color: #8f8aff;
+    animation: blink 1s infinite;
+}
+
+.ampm {
+    font-size: 20px;
+    color: #45edaa;
+    margin-left: 5px;
+    align-self: center;
+}
+
+.date-display {
+    margin-top: 30px;
+    font-size: 17px;
+    color: #c5c7e4;
+    letter-spacing: 1px;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #8f8aff;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 12px;
+    color: #a6a8c8;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 480px) {
+    .clock-card {
+        padding: 40px 15px;
+    }
+
+    .time-display {
+        gap: 4px;
+    }
+
+    .ampm {
+        font-size: 14px;
+    }
+
+    .date-display {
+        font-size: 14px;
+    }
+
+    .bottom-section {
+        font-size: 10px;
+    }
+}
